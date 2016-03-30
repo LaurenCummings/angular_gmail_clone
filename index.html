@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Sample AngularJS Controller</title>
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body ng-view>
+		<div ng-controller="TestCtrl">
+			<h1>{{title}}</h1>
+			<input type="text" ng-model="title" placeholder="Write a title here">
+		</div>
+
+		<script type="text/javascript" src="lib/jquery-1.12.2.min.js"></script>
+		<script type="text/javascript" src="lib/angular.min.js"></script>
+		<script type="text/javascript" src="lib/angular-route.js"></script>
+		
+		<script>
+			function TestCtrl($scope) {
+				$scope.title = 'Test Title';
+			}
+		</script>
+	</body>
+
+</html>
